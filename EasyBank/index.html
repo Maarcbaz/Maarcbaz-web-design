@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy/Bank</title>
-    <link rel="stylesheet" href="../EasyBank/styles.css">
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Easy/Bank</title>
+		<link rel="stylesheet" href="../EasyBank/styles.css" />
+		<link rel="icon" href="../EasyBank/images/favicon.png" />
+	</head>
+	<body>
+		<header>
+			<div class="logo-img logo-img-ft">
+				<a href="#">
+					<img src="../EasyBank/images/logo.svg" alt="logo image" />
+				</a>
+			</div>
+			<div class="overlay" id="myNav">
+				<a href="javascript:void(0)" onclick="closeNav()" class="closenav"
+					><img src="../EasyBank/images/close.svg" alt="close navigation icon"
+				/></a>
+				<div class="overlay-content">
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Contact</a>
+					<a href="#">Blog</a>
+					<a href="#">Career</a>
+				</div>
+			</div>
+			<span class="bar" onclick="openNav()">
+				<img src="../EasyBank/images/hamburger.svg" alt="hamburger icon" />
+			</span>
+			<nav>
+				<div class="topnav">
+					<div class="logo-img">
+						<a href="#">
+							<img src="../EasyBank/images/logo.svg" alt="logo image" />
+						</a>
+					</div>
+					<div class="nav-link">
+						<a href="#">Home</a>
+						<a href="#">About</a>
+						<a href="#">Contact</a>
+						<a href="#">Blog</a>
+						<a href="#">Career</a>
+					</div>
+					<button class="btn">Request Invite</button>
+				</div>
+			</nav>
+		</header>
+		<script src="../EasyBank/app.js"></script>
+	</body>
 </html>

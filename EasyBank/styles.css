@@ -1,0 +1,136 @@
+/* GENERAL RULE SET  */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* VARIABLES  */
+:root {
+    /* COLORS  */
+    /* PRIMARY COLORS  */
+    --DARK-BLUE: hsl(233, 26%, 24%);
+    --LIME-GREEN: hsl(136, 65%, 51%);
+    --BRIGHT-CYAN: hsl(192, 70%, 51%);
+
+    /* NEUTRAL  */
+    --GRAYISH-BLUE: hsl(233, 8%, 62%);
+    --LIGHT-GRAYISH-BLUE: hsl(220, 16%, 96%);
+    --VERY-LIGHT-GRAY: hsl(0, 0%, 98%);
+    --WHITE: hsl(0, 0%, 100%);
+    --BLACK: hsl(0, 0%, 0%);
+    /* FONT-SIZE  */
+    --SIZE: 18px;
+
+    /* FONT-WEIGHT  */
+    --LIGHT-WEIGHT: 300;
+    --MEDIUM-WEIGHT: 400;
+    --DARK-WEIGHT: 700;
+
+}
+
+header,
+main {
+    width: min(100% - 9vw, 1128px);
+    margin-inline: auto;
+}
+
+/* NAVIGATION  */
+header a {
+    text-decoration: none;
+    color: var(--BLACK);
+    font-size: 85%;
+}
+
+/* NAVIGATION UTILITY CLASSES  */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--WHITE);
+    margin-top: .5rem;
+}
+
+.nav-link {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link a:hover {
+    text-decoration: underline var(--LIME-GREEN) 2.3px;
+    transform: scale(1.1);
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background-image: linear-gradient(to left, var(--BRIGHT-CYAN),
+            var(--LIME-GREEN));
+    border-radius: 40px;
+    cursor: pointer;
+    color: var(--WHITE);
+}
+
+.btn:hover {
+    filter: brightness(85%);
+}
+.overlay, .bar, .logo-img-ft {
+    display: none;
+}
+
+/* SMALL SIZE NAVIGATION  */
+.overlay {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    background-color: black;
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    transition: .5s;
+    overflow-y: hidden;
+}
+
+.overlay-content {
+    position: relative;
+    width: 60%;
+    margin-top: 30px;
+    top: 25%;
+}
+
+.overlay a {
+    padding: 20px;
+    text-decoration: none;
+    color: rebeccapurple;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay .closenav {
+    top: 10px;
+    left: 20px;
+    position: absolute;
+}
+
+.bar {
+    top: -23px;
+    left: 255px;
+    position: relative;
+}
+.logo-img {
+    margin-top: 10px;    
+}
+
+@media screen and (max-width: 768px) {
+    .overlay, .bar, .logo-img-ft {
+        display: block ;
+    }
+    .topnav:not(.logo-img) {
+        display: none;
+    }
+}
