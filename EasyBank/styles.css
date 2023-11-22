@@ -34,8 +34,9 @@ html {
     --MEDIUM-WEIGHT: 400;
     --DARK-WEIGHT: 700;
 }
+/* GENERAL STYLING  */
 
-main,
+
 header {
     width: min(100% - 9vw, 1200px);
     margin-inline: auto;
@@ -47,6 +48,7 @@ img {
 }
 
 /* NAVIAGTION  */
+/* NAVIGATION UTILITY CLASS */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -96,6 +98,29 @@ img {
     display: none;
 }
 
+/* MAIN  */
+/* FIRST SECTION  */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: min(100% - 9vw, 1200px);
+    margin-inline: auto;
+}
+.image {
+    background-image: url(../EasyBank/images/intro_desktop.svg);
+    width: 50%;
+    margin-inline-end: -20%;
+    
+}
+.content-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* width: 70%; */
+    justify-content: center;
+}
+
+
 @media screen and (max-width: 670px) {
     .overlay {
         height: 100%;
@@ -139,8 +164,7 @@ img {
         font-size: 60px;
     }
 
-    .nav-link,
-    .btn {
+    .nav-link, .topnav > .btn {
         display: none;
     }
 
@@ -155,3 +179,5 @@ img {
         top: 10px;
     }
 }
+
+
