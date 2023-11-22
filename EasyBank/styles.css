@@ -1,11 +1,12 @@
 /* GENERAL RULE SET  */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Public Sans', sans-serif;
 }
 
 html {
@@ -26,6 +27,11 @@ html {
     --VERY-LIGHT-GRAY: hsl(0, 0%, 98%);
     --WHITE: hsl(0, 0%, 100%);
     --BLACK: hsl(0, 0%, 0%);
+    --OPAQUE-BLACK: hsla(0, 0%, 0%, 0.611);
+    --OPAQUE-BLACK-LIGHTER: hsla(0, 0%, 0%, 0.649);
+
+    /* BACKGROUND COLORS  */
+    --OPAQUE-BG-GRAY: rgba(243, 243, 243, 0.172);
     /* FONT-SIZE  */
     --SIZE: 18px;
 
@@ -34,6 +40,7 @@ html {
     --MEDIUM-WEIGHT: 400;
     --DARK-WEIGHT: 700;
 }
+
 /* GENERAL STYLING  */
 
 
@@ -52,7 +59,7 @@ img {
 .topnav {
     display: flex;
     justify-content: space-between;
-    height: 30px;
+    height: 40px;
     align-items: center;
     margin-top: .8rem;
 }
@@ -62,10 +69,11 @@ img {
     align-items: center;
 }
 
-.nav-link a {
+.nav-link a {   
     padding-left: 20px;
     color: var(--BLACK);
     text-decoration: none;
+    text-transform: capitalize;
 }
 
 .nav-link a:hover {
@@ -100,27 +108,55 @@ img {
 
 /* MAIN  */
 /* FIRST SECTION  */
-.container {
-    display: flex;
-    justify-content: space-between;
-    width: min(100% - 9vw, 1200px);
-    margin-inline: auto;
-}
-.image {
-    background-image: url(../EasyBank/images/intro_desktop.svg);
-    width: 50%;
-    margin-inline-end: -20%;
-    
-}
 .content-1 {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    /* width: 70%; */
+    align-items: baseline;
     justify-content: center;
+    z-index: 100;
+    align-content: stretch;
+    gap: .5rem;
+    flex-direction: column;
+}
+.content-1 h1 {
+    font-size: clamp(2rem, 7vw + 1rem, 3rem);
+    color: var(--OPAQUE-BLACK);
+    white-space: nowrap;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.content-1 p {
+    color: var(--OPAQUE-BLACK-LIGHTER);
+}
+.nowrap {
+    display: block;
 }
 
+.container {
+    margin-inline-start: auto;
+    width: min(100% - 9vw, 1200px);
+    display: flex;
+    background-color: var(--VERY-LIGHT-GRAY);
+    gap: 10rem;  
+    justify-content: space-between;
+    width: 100%;
 
+}
+
+.phone {
+    position: relative;
+    /* left: -10px; */
+    right: -100px;
+    top: -100px;
+}
+.intro {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 50%;
+}
+.image {
+    overflow: hidden !important;
+}
 @media screen and (max-width: 670px) {
     .overlay {
         height: 100%;
@@ -164,7 +200,8 @@ img {
         font-size: 60px;
     }
 
-    .nav-link, .topnav > .btn {
+    .nav-link,
+    .topnav>.btn {
         display: none;
     }
 
@@ -179,5 +216,3 @@ img {
         top: 10px;
     }
 }
-
-
