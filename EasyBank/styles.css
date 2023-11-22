@@ -46,7 +46,7 @@ html {
 
 
 header {
-    width: min(100% - 9vw, 1200px);
+    width: min(100% - 6vw, 1200px);
     margin-inline: auto;
 }
 
@@ -115,6 +115,7 @@ img {
     justify-content: center;
     z-index: 100;
     align-content: stretch;
+    padding-left: 3.5vw;
     gap: .5rem;
     flex-direction: column;
 }
@@ -125,6 +126,7 @@ img {
     white-space: nowrap;
     font-weight: 500;
     margin-bottom: 0;
+
 }
 
 .content-1 p {
@@ -135,6 +137,14 @@ img {
     display: block;
 }
 
+main {
+    /* width: min(100% - 9vw, 1200px);
+    margin-inline: auto;
+    margin: 0 calc(100% - 9vw, 1200px); */
+    
+    width: 100%;
+}
+
 .container {
     margin-inline-start: auto;
     width: min(100% - 9vw, 1200px);
@@ -142,8 +152,8 @@ img {
     background-color: var(--VERY-LIGHT-GRAY);
     gap: 10rem;
     justify-content: space-between;
-    width: 100%;
-
+    /* max-width: 1200px; */
+    width: 100% !important;
 }
 
 .phone {
