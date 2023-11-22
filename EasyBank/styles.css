@@ -1,5 +1,6 @@
 /* GENERAL RULE SET  */
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
 body {
     min-height: 100vh;
     display: flex;
@@ -69,7 +70,7 @@ img {
     align-items: center;
 }
 
-.nav-link a {   
+.nav-link a {
     padding-left: 20px;
     color: var(--BLACK);
     text-decoration: none;
@@ -117,6 +118,7 @@ img {
     gap: .5rem;
     flex-direction: column;
 }
+
 .content-1 h1 {
     font-size: clamp(2rem, 7vw + 1rem, 3rem);
     color: var(--OPAQUE-BLACK);
@@ -124,9 +126,11 @@ img {
     font-weight: 500;
     margin-bottom: 0;
 }
+
 .content-1 p {
     color: var(--OPAQUE-BLACK-LIGHTER);
 }
+
 .nowrap {
     display: block;
 }
@@ -136,7 +140,7 @@ img {
     width: min(100% - 9vw, 1200px);
     display: flex;
     background-color: var(--VERY-LIGHT-GRAY);
-    gap: 10rem;  
+    gap: 10rem;
     justify-content: space-between;
     width: 100%;
 
@@ -145,18 +149,21 @@ img {
 .phone {
     position: relative;
     /* left: -10px; */
-    right: -100px;
+    right: -0px;
     top: -100px;
 }
+
 .intro {
     position: absolute;
     right: 0;
     top: 100px;
     width: 50%;
 }
+
 .image {
     overflow: hidden !important;
 }
+
 @media screen and (max-width: 670px) {
     .overlay {
         height: 100%;
