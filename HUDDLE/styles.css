@@ -11,9 +11,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 img {
     max-width: 100%;
     display: block;
@@ -55,7 +57,10 @@ nav {
     align-items: center;
     box-shadow: 5px 5px 5px 0px #cec3c3;
     cursor: pointer;
+    color: var(--BLACK);
 }
+
+
 
 .nav-link:hover {
     filter: brightness(95%);
@@ -228,6 +233,7 @@ footer {
     footer {
         text-align: center;
     }
+
     .footer {
         flex-direction: column;
     }
@@ -236,6 +242,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
     .ft-links {
         flex-direction: column;
         gap: 1.5rem;
@@ -247,6 +254,7 @@ footer {
         font-weight: 200;
         width: 75%;
     }
+
     .ft-logo {
         width: min-content;
     }

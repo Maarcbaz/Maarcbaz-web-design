@@ -57,11 +57,13 @@ nav {
     align-items: center;
     box-shadow: 5px 5px 5px 0px #cec3c3;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-link:hover {
     filter: brightness(95%);
 }
+
 
 /* MAIN */
 /* UTILITY CLASSES */
