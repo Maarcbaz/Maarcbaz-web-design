@@ -33,7 +33,7 @@ img {
 }
 
 /* HEADER  */
-header {
+header, main {
     width: min(100% - 5vw, 1200px);
     margin-inline: auto;
     margin-top: .5rem;
@@ -85,6 +85,10 @@ button {
     flex-direction: column;
 }
 
+p {
+    text-align: center;
+}
+
 .hero-content p, span:not(.not) {
     color: var(--OPAQUE-WHITE);
     font-size: 90%;
@@ -119,4 +123,10 @@ h1 {
     .nav-link a {
         font-size: 90%;
     }
+   h1 {
+    font-size: 98%;
+   }
+   p {
+    font-size: 90%;
+   }
 }
