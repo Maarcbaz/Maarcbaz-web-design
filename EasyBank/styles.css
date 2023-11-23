@@ -46,7 +46,7 @@ html {
 
 
 header {
-    width: min(100% - 6vw, 1200px);
+    width: min(100% - 6vw);
     margin-inline: auto;
 }
 
@@ -112,11 +112,10 @@ img {
 .content-1 {
     display: flex;
     align-items: baseline;
-    justify-content: center;
     z-index: 100;
-    align-content: stretch;
     padding-left: 3.5vw;
     width: 40%;
+    margin-top: 200px;
     gap: .5rem;
     flex-direction: column;
 }
@@ -142,7 +141,7 @@ main {
     /* width: min(100% - 9vw, 1200px);
     margin-inline: auto;
     margin: 0 calc(100% - 9vw, 1200px); */
-    
+
     width: 100%;
 }
 
@@ -171,6 +170,7 @@ main {
     z-index: 1;
     width: 50%;
 }
+
 .image {
     background-image: url(../EasyBank/images/intro_desktop.svg);
     overflow: hidden !important;
@@ -185,7 +185,7 @@ main {
         height: 100%;
         width: 0;
         position: fixed;
-        z-index: 1;
+        z-index: 100000;
         top: 42px;
         left: 0;
         background-color: var(--WHITE);
@@ -238,4 +238,12 @@ main {
         position: relative;
         top: 10px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        width: 40%;
+        height: ;
+    }
+    
 }
