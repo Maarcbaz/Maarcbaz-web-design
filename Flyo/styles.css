@@ -14,6 +14,10 @@ img {
     max-width: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* COLORS  */
     /* ACCENT  */
@@ -64,6 +68,7 @@ main {
 
 .nav-link a:hover {
     text-decoration: underline var(--BLUE-ACTION-GREDIENT) 1.3px;
+    color: var(--OPAQUE-WHITE);
 }
 
 .hero {
@@ -90,12 +95,12 @@ p {
     text-align: center;
     color: var(--OPAQUE-WHITE);
 }
+
 h3 {
     color: var(--WHITE);
 }
 
-p,
- {
+p {
     color: var(--OPAQUE-WHITE);
 }
 
@@ -135,13 +140,16 @@ h1 {
 
 article {
 
-    width: min(100% - 15vw, 1128px);
+    width: min(100% - 20vw, 1128px);
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section {
     justify-content: space-between;
-    gap: 5rem;
+    gap: 4rem;
     display: flex;
     margin-top: 4rem;
 }
@@ -149,15 +157,16 @@ article {
 .section-content {
     display: flex;
     flex-direction: column;
+    width: 50%;
     align-items: center;
     justify-content: center;
 }
 
 .section-2 {
-    display: flex;
     justify-content: space-between;
-    margin-top: 6rem;
-    gap: 5rem;
+    gap: 4rem;
+    display: flex;
+    margin-top: 4rem;
 }
 
 
@@ -187,9 +196,23 @@ article {
     .container {
         flex-direction: column;
     }
-    .section, .section-2 {
+
+    .section,
+    .section-2 {
         flex-direction: column;
         margin-top: 2rem;
         gap: 2rem;
+    }
+    .section-content {
+        
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    article {
+
+        width: min(100% - 15vw, 1128px);
+        margin-inline: auto;
     }
 }
