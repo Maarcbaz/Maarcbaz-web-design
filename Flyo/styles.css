@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&family=Raleway&display=swap');
+
+/* GENERAL RULE SET  */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--MAIN-BACKGROUND);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    /* COLORS  */
+    /* ACCENT  */
+    --DARK-BLUE-INTRO-EMAIL-BACKGROUND: hsl(217, 28%, 15%);
+    --MAIN-BACKGROUND: hwb(217 9% 84%);
+    --DARK-BLUE-FOOTER-BACKGROUND: hsl(216, 53%, 9%);
+    --CARK-BLUE-TESTIMONIAL-BACKGROUND: hsl(219, 30%, 18%);
+
+    /* ACCENT  */
+    --CYAN-ACTION-GRADIENT: hsl(176, 68%, 64%);
+    --BLUE-ACTION-GREDIENT: hsl(198, 60%, 50%);
+    --LIGHT-RED-ERROR: hsl(0, 100%, 63%);
+
+    /* NEUTRAL  */
+    --WHITE: hsl(0, 0%, 100%);
+    --OPAQUE-WHITE: hsla(0, 0%, 100%, 0.318);
+}
+
+/* HEADER  */
+header {
+    width: min(100% - 5vw, 1200px);
+    margin-inline: auto;
+    margin-top: .5rem;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.nav-link a {
+    color: var(--WHITE);
+    text-decoration: none;
+    display: flex;
+    white-space: nowrap;
+}
+
+.nav-link a:hover {
+    text-decoration: underline var(--BLUE-ACTION-GREDIENT) 1.3px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    color: var(--WHITE);
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.hero-content,
+span,
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--WHITE);
+    flex-direction: column;
+}
+
+.hero-content p, span:not(.not) {
+    color: var(--OPAQUE-WHITE);
+    font-size: 90%;
+    font-weight: 400;
+}
+h1 {
+    font: 90%;
+    line-height: 1.3;
+}
+.btn {
+    color: var(--WHITE);
+    background-image: linear-gradient(to bottom, var(--CYAN-ACTION-GRADIENT), var(--BLUE-ACTION-GREDIENT));
+    border: none;
+    padding: 12px 50px;
+    font-weight: 550;
+    border-radius: 30px;   
+    cursor: pointer;
+}
+.btn:hover {
+    filter: brightness(85%);
+}
+
+@media screen and (max-width: 768px) {
+    .topnav img {
+        max-width: 100%;
+    }
+
+    .nav-link {
+        gap: .7rem;
+    }
+
+    .nav-link a {
+        font-size: 90%;
+    }
+}
