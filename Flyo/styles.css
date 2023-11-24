@@ -82,7 +82,7 @@ main {
 }
 
 .hero-content,
-span,
+header span,
 button {
     display: flex;
     align-items: center;
@@ -105,14 +105,14 @@ p {
 }
 
 .hero-content p,
-span:not(.not) {
+header span:not(.not) {
     color: var(--OPAQUE-WHITE);
     font-size: 90%;
     font-weight: 400;
 }
 
 h1 {
-    font: 90%;
+    font: 95%;
     line-height: 1.3;
 }
 
@@ -170,7 +170,38 @@ article {
 }
 
 
-
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    margin-top: 7rem;;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-content p {
+    text-align: left;
+}
+.main-content h1 {
+    color: var(--WHITE);
+}
+.main-content span {
+    display: block;
+}
+.flyo {
+    display: flex;
+    gap: .4rem;
+    color: var(--BLUE-ACTION-GREDIENT);
+}
+.flyo img:hover {
+    transform: translate(2px);
+}
+.flyo:hover {
+    text-decoration: none;
+}
 
 @media screen and (max-width: 768px) {
     .topnav img {
@@ -207,6 +238,14 @@ article {
         
         width: 100%;
     }
+    .main-section {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .main-content h1 {
+        font-size: x-large;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -215,4 +254,5 @@ article {
         width: min(100% - 15vw, 1128px);
         margin-inline: auto;
     }
+    
 }

@@ -237,10 +237,4 @@ main {
         position: relative;
         top: 10px;
     }
-    .intro-m {
-        display: block;
-    }
-    .image {
-        display: none;
-    }
 }
