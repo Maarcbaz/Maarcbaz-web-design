@@ -37,6 +37,10 @@ html {
 }
 
 /* HEADER  */
+p {
+    font-weight: 560;
+}
+
 header,
 main {
     width: min(100% - 5vw, 1200px);
@@ -96,8 +100,9 @@ p {
     color: var(--OPAQUE-WHITE);
 }
 
-h3 {
+h4 {
     color: var(--WHITE);
+    font-size: 85%;
 }
 
 p {
@@ -175,32 +180,111 @@ article {
     justify-content: space-between;
     align-items: center;
     gap: 7rem;
-    margin-top: 7rem;;
+    margin-top: 7rem;
+    ;
 }
+
 .main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .main-content p {
     text-align: left;
 }
+
 .main-content h1 {
     color: var(--WHITE);
 }
+
 .main-content span {
     display: block;
 }
+
 .flyo {
     display: flex;
     gap: .4rem;
     color: var(--BLUE-ACTION-GREDIENT);
 }
+
 .flyo img:hover {
     transform: translate(2px);
 }
+
 .flyo:hover {
     text-decoration: none;
+}
+
+/* CARDS  */
+h3 {
+    color: var(--WHITE);
+}
+
+.cards {
+    display: flex;
+    gap: 2.5rem;
+    width: min(100% - 1vw, 1200px);
+    margin-inline: auto;
+}
+
+.card p {
+    font-size: 85%;
+    text-align: left;
+}
+
+.card {
+    width: 33%;
+    border-radius: 10px;
+    margin-top: 7rem;
+    padding: 20px;
+    background-color: var(--CARK-BLUE-TESTIMONIAL-BACKGROUND);
+}
+
+.text {
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.flyo-testi {
+    flex-direction: column;
+    display: flex;
+}
+
+h5 {
+    margin-top: -11px;
+    font-size: 80%;
+    color: var(--OPAQUE-WHITE);
+}
+
+.flyo-staff {
+    display: flex;
+    gap: 1rem;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.quote {
+    position: relative;
+    bottom: -91px;
+    right: -53px;
+    z-index: -1;
+}
+
+.quote-end {
+    transform: rotate(180deg);
+    position: relative;
+    /* right: -60px; */
+    top: 20px;
+    right: 70px;
+
+    position: relative;
+    z-index: -1;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -221,7 +305,7 @@ article {
     }
 
     p {
-        font-size: 90%;
+        font-size: 100%;
     }
 
     .container {
@@ -234,17 +318,48 @@ article {
         margin-top: 2rem;
         gap: 2rem;
     }
+
     .section-content {
-        
+
         width: 100%;
     }
+
     .main-section {
         flex-direction: column;
         gap: 4rem;
         margin-top: 4rem;
     }
+
     .main-content h1 {
         font-size: x-large;
+    }
+
+    .main-content span {
+        display: inline;
+    }
+
+    .cards {
+        gap: 1.5rem;
+        flex-direction: column;
+        width: min(100% - 5vw, 1308px);
+        margin-inline: auto;
+
+
+    }
+
+    .card {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .quote {
+        left: -18px;
+        bottom: -53px;
+    }
+
+    .quote-end {
+        right: -1px;
+        top: -36px;
     }
 }
 
@@ -254,5 +369,9 @@ article {
         width: min(100% - 15vw, 1128px);
         margin-inline: auto;
     }
-    
+
+    .quote-end {
+        right: -6px;
+        top: -34px;
+    }
 }
